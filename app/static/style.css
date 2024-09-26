@@ -1,0 +1,258 @@
+/* Color scheme */
+:root {
+  --primary-color: #0C2340;
+  --secondary-color: #FFFFFF;
+  --accent-color: #FCD116;
+}
+
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+main {
+  padding: 2rem;
+  margin-top: 10rem; /* Adjust as needed */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+}
+/* Style the buttons */
+.button {
+display: inline-block;
+background-color: #007bff;
+color: #fff;
+padding: 10px 20px;
+border-radius: 5px;
+text-decoration: none;
+margin-right: 10px;
+}
+
+/* Add some space between the buttons */
+.button + .button {
+margin-left: 10px;
+}
+
+label {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+input, select, button {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.25rem;
+}
+
+input[type="file"] {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+}
+
+button {
+  background-color: #FCD116;
+  color: #0C2340;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #0C2340;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+/* Header styling */
+header {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+nav {
+  display: flex;
+  align-items: left;
+}
+
+nav a {
+  color: var(--primary-color);
+  text-decoration: none;
+  margin: 0 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  padding-left: 10px;
+}
+
+nav a:hover {
+  color: var(--accent-color);
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  color: var(--primary-color);
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--secondary-color);
+  display: none;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.dropdown-toggle:hover + .dropdown-menu,
+.dropdown-menu:hover {
+  display: flex;
+}
+
+.dropdown-link {
+  display: block;
+  color: var(--primary-color);
+  padding: 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.dropdown-link:hover {
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: var(--secondary-color);
+}
+
+/* Gallery styling */
+.gallery {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.gallery-item {
+  flex: 1 0 33.33%;
+  height: 50vh;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.gallery-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.2);
+}
+
+.gallery-item h2 {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover h2 {
+  opacity: 1;
+}
+
+/* Content styling */
+.content {
+  padding: 2rem;
+}
+
+.content h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Footer styling */
+footer {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  font-size: 1.2rem;
+  margin: 0;
+}

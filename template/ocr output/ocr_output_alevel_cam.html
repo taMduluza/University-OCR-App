@@ -1,0 +1,15 @@
+{% extends 'home base/base.html' %}
+{% block title %} Upload Birth Certificate {% endblock %} 
+
+{% block content %}
+<body>
+    <h1>A Level</h1><br>
+    <p>Session: {{ text1 }}</p><br>
+    <p>Name: {{ text2 }}</p><br>
+    <p>School: {{ text3 }}</p><br>
+    <p>Results: {{ text4 }}</p><br>
+</body>
+<form action='review_app/<int:id>/'>
+    <button type="submit">Next</button>
+  </form> 
+{% endblock %}

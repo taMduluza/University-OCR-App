@@ -1,0 +1,53 @@
+{% extends 'home base/base.html' %}
+{% block title %} UZ Application Home {% endblock %} 
+
+{% block content %}
+<div class="gallery">
+    <div class="gallery-item">
+        <img src="https://www.uz.ac.zw/images/uzfrontgallery_2/UZ%20Great%20Hall_2.png" alt="Image 1">
+        <h2>Welcome to UZ</h2>
+    </div>
+    <div class="gallery-item">
+        <img src="https://www.uz.ac.zw/images/uzfrontgallery/Research%20wee%20exhibition%20hall.JPG" alt="Image 2">
+        <h2>Study at UZ</h2>
+    </div>
+    <div class="gallery-item">
+        <img src="https://www.uz.ac.zw/images/uzfrontgallery/Students%20in%2024hour%20libabry%20facility.JPG" alt="Image 3">
+        <h2>Join UZ</h2>
+    </div>
+    <div class="gallery-item">
+        <img src="https://www.uz.ac.zw/images/uzfrontgallery/Graduands%20Await%20their%20turn%20to%20be%20capped.JPG" alt="Image 4">
+        <h2>Graduate from UZ</h2>
+    </div>
+    <div class="gallery-item">
+        <img src="https://www.uz.ac.zw/images/uzfrontgallery/Students%20writing%20examinations.JPG" alt="Image 5">
+        <h2>Be part of UZ</h2>
+    </div>
+    <div class="gallery-item">
+        <img src="https://www.uz.ac.zw/images/uzfrontgallery_2/Halls%20of%20Residence%20Overview.png" alt="Image 6">
+        <h2>Experience UZ</h2>
+    </div>
+</div>
+
+<div class="content">
+    <h2>Welcome to the University of Zimbabwe Application Portal</h2>
+    <p>We are excited to offer you the opportunity to apply to our world-class university. With a wide range of programs and cutting-edge facilities, we are committed to providing our students with the best possible education and resources to succeed in their chosen fields.</p>
+    <p>Our application process is simple and straightforward. Just create an account, complete the application form, and submit your supporting documents. Our admissions team will review your application and get back to you as soon as possible.</p>
+    <p>If you have any questions or need assistance with your application, please do not hesitate to contact us. We are here to help you every step of the way.</p><br><br>
+    <p>Our application process is simple and straightforward. Just create an account, complete the application form, and submit your supporting documents. Our admissions team will review your application and get back to you as soon as possible.</p>
+    <p>If you have any questions or need assistance with your application, please do not hesitate to contact us. We are here to help you every step of the way.</p>
+<div class="content">
+</div>
+</div>
+{% if user.is_authenticated %}
+<form action="/birth_cert/">
+    <button type="submit">Apply</button>
+  </form> 
+    {% else %}
+    <form action="{% url 'login' %}">
+        <button type="submit">Apply</button>
+    {% endif %}
+    <form action="/track_app/">
+        <button type="submit">Track Application</button>
+<div class="content">
+    {% endblock %}

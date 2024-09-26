@@ -1,0 +1,38 @@
+{% extends 'home base/base.html' %}
+{% block title %} Upload A-Level Certificate {% endblock %} 
+{% load my_filters %}
+{% block content %}
+<body>
+	<div class="container">
+		<div class="form">
+			<h2>Student Result</h2>
+			<form>
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required>
+
+				<label for="id">ID Number:</label>
+				<input type="number" id="id" name="id" required>
+
+				<label for="candidate">Candidate Number:</label>
+				<input type="number" id="candidate" name="candidate" required>
+
+				<label for="school">School:</label>
+				<input type="text" id="school" name="school" required>
+
+				<label for="result">Result:</label>
+				<input type="text" id="result" name="result" required>
+
+				<button type="submit">Submit</button>
+			</form>
+		</div>
+		<div class="image">
+			<img src="image-placeholder.png" alt="Image Placeholder">
+		</div>
+		<div class="buttons">
+			<button id="reject">Reject Certificate</button>
+			<button id="accept">Accept Certificate</button>
+		</div>
+	</div>
+</body>
+
+{% endblock %}

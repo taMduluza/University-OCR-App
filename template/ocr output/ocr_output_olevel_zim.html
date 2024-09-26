@@ -1,0 +1,16 @@
+{% extends 'home base/base.html' %}
+{% block title %} Upload Birth Certificate {% endblock %} 
+
+{% block content %}
+<body>
+    <h1>O Level</h1><br>
+    <p>Name: {{ text1 }}</p><br>
+    <p>Session: {{ text2 }}</p><br>
+    <p>Candidate Details: {{ text3 }}</p><br>
+    <p>School: {{ text4 }}</p><br>
+    <p>Results: {{ text5 }}</p><br>
+</body>
+<form action='/alevel_zim/'>
+    <button type="submit">Next</button>
+  </form> 
+{% endblock %}

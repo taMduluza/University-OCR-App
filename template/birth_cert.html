@@ -1,0 +1,51 @@
+{% extends 'home base/base.html' %}
+{% block title %} Upload Birth Certificate {% endblock %} 
+
+{% block content %}
+<style>
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    form {
+        max-width: 500px;
+        margin: 0 auto;
+        border: 2px solid #0071c5;
+        border-radius: 5px;
+        padding: 20px;
+        background-color: #0C2340;
+        box-shadow: 0 0 10px #0071c5;
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+    input[type="file"] {
+        margin-bottom: 20px;
+    }
+    input[type="submit"] {
+        background-color: #f7b500;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #ffcc00;
+    }
+    </style>
+<body>
+    <h1>Upload Birth Certificate</h1><br><br><br><br>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>
+            <label for="file">Select image:</label>
+            <input type="file" name="image" id="file">
+        </p>
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+</body>
+{% endblock %} 

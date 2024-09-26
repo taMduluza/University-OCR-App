@@ -1,0 +1,155 @@
+{% extends 'home base/base.html' %}
+
+{% block content %}
+<style>
+  .chart {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+  }
+
+  .stage-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 20px;
+  }
+
+  .stage {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.8em;
+      color: #fff;
+      text-shadow: 1px 1px #000;
+      border: 1px solid #ccc;
+  }
+
+  .stage.completed {
+      background-color: green;
+  }
+
+  .stage.inprogress {
+      background-color: orange;
+  }
+
+  .stage.pending {
+      background-color: gray;
+  }
+
+  .key {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+  }
+
+  .key-item {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+  }
+
+  .key-item.completed {
+      color: green;
+  }
+
+  .key-item.inprogress {
+      color: orange;
+  }
+
+  .key-item.pending {
+      color: gray;
+  }
+
+  .key-dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin-right: 10px;
+  }
+
+  .key-dot.completed {
+      background-color: green;
+  }
+
+  .key-dot.inprogress {
+      background-color: orange;
+  }
+
+  .key-dot.pending {
+      background-color: gray;
+  }
+
+  .arrow {
+      border-top: 2px dashed #ccc;
+      width: 50px;
+      transform: rotate(45deg);
+      margin-left: -25px;
+      margin-right: -25px;
+  }
+
+  .arrow.completed {
+      border-top-color: green;
+  }
+
+  .arrow.inprogress {
+      border-top-color: orange;
+  }
+
+  .arrow.pending {
+      border-top-color: gray;
+  }
+
+  .stage-text {
+      margin-top: 5px;
+      text-align: center;
+  }
+</style>
+</head>
+<body>
+<h1>Application Status</h1>
+<div class="chart">
+  <div class="stage-container">
+      <div class="stage completed">
+          1
+      </div>
+      <div class="stage-text">Collecting Information</div>
+  </div>
+  <div class="arrow completed"></div>
+  <div class="stage-container">
+      <div class="stage inprogress">
+          2
+      </div>
+      <div class="stage-text">Verifying Documents</div>
+  </div>
+  <div class="arrow pending"></div>
+  <div class="stage-container">
+      <div class="stage pending">
+          3
+      </div>
+      <div class="stage-text">Application Complete</div>
+  </div>
+</div>
+<div class="key">
+  <div class="key-item">
+      <div class="key-dot completed"></div>
+      Completed
+  </div>
+  <div class="key-item">
+      <div class="key-dot inprogress"></div>
+      In Progress
+  </div>
+  <div class="key-item">
+      <div class="key-dot pending"></div>
+      Pending
+  </div>
+</div>
+<p>Progress: 50%</p>
+</body>
+{% endblock %}

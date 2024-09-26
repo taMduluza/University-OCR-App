@@ -1,0 +1,26 @@
+{% extends 'home base/base.html' %}
+
+{% block title %} Upload Birth Certificate {% endblock %}
+
+{% block content %}
+<body>
+    <h1>Birth Certificate</h1><br>
+    <form method="post">
+        {% csrf_token %}
+        <label for="id_number">ID Number:</label>
+        <input type="text" id="id_number" name="id_number" value="{{ text1 }}"><br>
+
+        <label for="first_names">First Names:</label>
+        <input type="text" id="first_names" name="first_names" value="{{ text2 }}"><br>
+
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" value="{{ text3 }}"><br>
+        <br>
+        <form action='/cert_choice/'>
+          <button type="submit">Save</button>
+    </form>
+    <form action="/cert_choice/">
+        <button type="submit">Next</button>
+    </form>
+</body>
+{% endblock %}

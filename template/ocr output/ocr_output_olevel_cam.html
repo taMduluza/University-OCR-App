@@ -1,0 +1,32 @@
+{% extends 'home base/base.html' %}
+{% block title %} Upload Birth Certificate {% endblock %} 
+{% load my_filters %}
+{% block content %}
+<body>
+  <h1>O Level</h1><br>
+  {% if image %}
+    <img src="{{ image.url }}" alt="Uploaded Image">
+{% endif %}
+  <form method="post">
+      {% csrf_token %}
+      <label for="id_number">Session:</label>
+      <input type="text" id="id_number" name="id_number" value="{{ text1 }}"><br>
+
+      <label for="first_names">Name:</label>
+      <input type="text" id="first_names" name="first_names" value="{{ text2 }}"><br>
+
+      <label for="last_name">School:</label>
+      <input type="text" id="last_name" name="last_name" value="{{ text3 }}"><br>
+      <br>
+      <label for="last_name">Results:</label>
+      <input type="text" id="Results" name="result" value="{{ text4 }}"><br>
+      <input type="text" id="Results" name="result" value="{{ text5 }}"><br>
+      <input type="text" id="Results" name="result" value="{{ text6 }}"><br>
+      <form action='/cert_choice/'>
+        <button type="submit">Save</button>
+  </form>
+</body>
+<form action='/alevel_cam/'>
+    <button type="submit">Next</button>
+  </form> 
+{% endblock %}
